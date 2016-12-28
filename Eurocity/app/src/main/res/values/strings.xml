@@ -3,4 +3,6 @@
     <string name="introduce_tu_usuario">Introduce tu usuario</string>
     <string name="siguiente">Siguiente</string>
     <string name="perfil">Perfil</string>
+    <string name="mis_destinos">Mis Destinos</string>
+    <string name="nuevo_viaje">Nuevo Viaje</string>
 </resources>
