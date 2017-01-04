@@ -17,7 +17,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:text="@string/cl_destino"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:textSize="20dp"
             android:layout_marginLeft="10dp"
@@ -37,9 +37,44 @@
     </RelativeLayout>
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:text="Lisboa"/>
+        android:layout_height="wrap_content"
+        android:columnCount="2">
+        <Button
+            android:text="@string/lisboa"
+            android:onClick="viajar"
+            android:layout_width="250dp"
+            android:layout_height="50dp"/>
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@android:drawable/ic_lock_silent_mode_off"/>
+        <Button
+            android:text="@string/londres"
+            android:onClick="viajar"
+            android:layout_width="250dp"
+            android:layout_height="50dp"/>
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@android:drawable/ic_lock_silent_mode_off"/>
+        <Button
+            android:text="@string/paris"
+            android:onClick="viajar"
+            android:layout_width="250dp"
+            android:layout_height="50dp"/>
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@android:drawable/ic_lock_silent_mode_off"/>
+        <Button
+            android:text="@string/roma"
+            android:onClick="viajar"
+            android:layout_width="250dp"
+            android:layout_height="50dp"/>
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@android:drawable/ic_lock_silent_mode_off"/>
     </GridLayout>
 
 </LinearLayout>

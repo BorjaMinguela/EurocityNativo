@@ -20,7 +20,8 @@
         <activity
             android:name=".Perfil"
             android:label="@string/perfil" />
-        <activity android:name=".NuevoViaje"></activity>
+        <activity android:name=".NuevoViaje" />
+        <activity android:name=".ViajePpal"></activity>
     </application>
 
 </manifest>

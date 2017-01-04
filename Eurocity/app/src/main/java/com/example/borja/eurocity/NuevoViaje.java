@@ -21,4 +21,9 @@ public class NuevoViaje extends AppCompatActivity {
 //        LinearLayout layout = (LinearLayout) findViewById(R.id.activity_nuevo_viaje);
 //        layout.addView(wView);
     }
+
+    public void viajar(View view){
+        Intent intent = new Intent(this, ViajePpal.class);
+        startActivity(intent);
+    }
 }
