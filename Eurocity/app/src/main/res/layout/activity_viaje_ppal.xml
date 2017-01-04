@@ -35,22 +35,32 @@
             android:layout_toRightOf="@+id/textView"/>
     </RelativeLayout>
     <Button
+        android:id="@+id/btn1"
+        android:layout_margin="5dp"
         android:text="@string/idioma"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
     <Button
+        android:id="@+id/btn2"
+        android:layout_margin="5dp"
         android:text="@string/ubicacion"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
     <Button
+        android:id="@+id/btn3"
+        android:layout_margin="5dp"
         android:text="@string/turismo"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
     <Button
+        android:id="@+id/btn4"
+        android:layout_margin="5dp"
         android:text="@string/valoracion"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
     <Button
+        android:id="@+id/btn5"
+        android:layout_margin="5dp"
         android:text="@string/aprendido"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>

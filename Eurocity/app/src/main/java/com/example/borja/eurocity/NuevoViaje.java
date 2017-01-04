@@ -8,6 +8,8 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
 
+import com.example.borja.eurocity.model.Viaje;
+
 public class NuevoViaje extends AppCompatActivity {
 
     @Override
@@ -24,6 +26,8 @@ public class NuevoViaje extends AppCompatActivity {
 
     public void viajar(View view){
         Intent intent = new Intent(this, ViajePpal.class);
+        Viaje viaje = new Viaje(view.getTag().toString());
+        intent.putExtra("Viaje",viaje);
         startActivity(intent);
     }
 }

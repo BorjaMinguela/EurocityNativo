@@ -42,6 +42,7 @@
         <Button
             android:text="@string/lisboa"
             android:onClick="viajar"
+            android:tag="lisboa"
             android:layout_width="250dp"
             android:layout_height="50dp"/>
         <ImageButton
@@ -51,6 +52,7 @@
         <Button
             android:text="@string/londres"
             android:onClick="viajar"
+            android:tag="londres"
             android:layout_width="250dp"
             android:layout_height="50dp"/>
         <ImageButton
@@ -60,6 +62,7 @@
         <Button
             android:text="@string/paris"
             android:onClick="viajar"
+            android:tag="paris"
             android:layout_width="250dp"
             android:layout_height="50dp"/>
         <ImageButton
@@ -69,6 +72,7 @@
         <Button
             android:text="@string/roma"
             android:onClick="viajar"
+            android:tag="roma"
             android:layout_width="250dp"
             android:layout_height="50dp"/>
         <ImageButton
