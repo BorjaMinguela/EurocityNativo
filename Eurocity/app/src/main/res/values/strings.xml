@@ -17,4 +17,6 @@
     <string name="turismo">Turismo</string>
     <string name="valoracion">Valoración</string>
     <string name="aprendido">¿Cúanto has aprendido?</string>
+    <string name="no_camera">Se requiere de una cámara</string>
+    <string name="no_app">No Packet Manager</string>
 </resources>
