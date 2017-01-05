@@ -3,9 +3,12 @@
     package="com.example.borja.eurocity">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
-    <uses-feature android:name="android.hardware.camera" android:required="false"></uses-feature>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -24,7 +27,8 @@
             android:name=".Perfil"
             android:label="@string/perfil" />
         <activity android:name=".NuevoViaje" />
-        <activity android:name=".ViajePpal"></activity>
+        <activity android:name=".ViajePpal" />
+        <activity android:name=".Idioma"></activity>
     </application>
 
 </manifest>

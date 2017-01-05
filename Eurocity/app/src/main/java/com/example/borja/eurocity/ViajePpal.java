@@ -1,7 +1,9 @@
 package com.example.borja.eurocity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -21,5 +23,15 @@ public class ViajePpal extends AppCompatActivity {
         ((Button) findViewById(R.id.btn5)).setBackgroundColor(getResources().getColor(viaje.getColor()));
 
 
+    }
+
+    public void idioma(View view){
+        Intent intent = new Intent(this, Idioma.class);
+        startActivity(intent);
+    }
+
+    public void ubicación(View view){
+        Intent intent = new Intent(this, Idioma.class);
+        startActivity(intent);
     }
 }

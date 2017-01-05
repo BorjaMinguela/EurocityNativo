@@ -36,6 +36,7 @@
     </RelativeLayout>
     <Button
         android:id="@+id/btn1"
+        android:onClick="idioma"
         android:layout_margin="5dp"
         android:text="@string/idioma"
         android:layout_width="match_parent"
