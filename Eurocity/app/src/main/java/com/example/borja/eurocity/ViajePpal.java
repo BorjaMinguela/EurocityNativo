@@ -10,12 +10,13 @@ import android.widget.Toast;
 import com.example.borja.eurocity.model.Viaje;
 
 public class ViajePpal extends AppCompatActivity {
+    private Viaje viaje;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viaje_ppal);
-        Viaje viaje= (Viaje) getIntent().getSerializableExtra("Viaje");
+        viaje= (Viaje) getIntent().getSerializableExtra("Viaje");
         ((Button) findViewById(R.id.btn1)).setBackgroundColor(getResources().getColor(viaje.getColor()));
         ((Button) findViewById(R.id.btn2)).setBackgroundColor(getResources().getColor(viaje.getColor()));
         ((Button) findViewById(R.id.btn3)).setBackgroundColor(getResources().getColor(viaje.getColor()));
@@ -31,7 +32,7 @@ public class ViajePpal extends AppCompatActivity {
     }
 
     public void ubicación(View view){
-        Intent intent = new Intent(this, Idioma.class);
+        Intent intent = new Intent(Intent.ACTION_VIEW,viaje.getLocation());
         startActivity(intent);
     }
 }
