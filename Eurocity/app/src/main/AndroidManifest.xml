@@ -28,7 +28,8 @@
             android:label="@string/perfil" />
         <activity android:name=".NuevoViaje" />
         <activity android:name=".ViajePpal" />
-        <activity android:name=".Idioma"></activity>
+        <activity android:name=".Idioma" />
+        <activity android:name=".Valoracion"></activity>
     </application>
 
 </manifest>

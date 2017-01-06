@@ -35,4 +35,13 @@ public class ViajePpal extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_VIEW,viaje.getLocation());
         startActivity(intent);
     }
+
+    public void turismo(View view){
+
+    }
+
+    public void valoracion(View view){
+        Intent intent = new Intent(this, Valoracion.class);
+        startActivity(intent);
+    }
 }
