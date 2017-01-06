@@ -16,12 +16,14 @@ public class NuevoViaje extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuevo_viaje);
-//        WebView wView=new WebView(this);
-//        wView.loadUrl("drawable/doge.gif");
-//        wView.setBackgroundColor(Color.TRANSPARENT);
-//        wView.setLayerType(WebView.LAYER_TYPE_SOFTWARE, null);
-//        LinearLayout layout = (LinearLayout) findViewById(R.id.activity_nuevo_viaje);
-//        layout.addView(wView);
+        WebView wView=(WebView)findViewById(R.id.nv_web);
+        wView.loadUrl("file:///android_asset/doge.html");
+        wView.setBackgroundColor(Color.TRANSPARENT);
+        wView.setLayerType(WebView.LAYER_TYPE_SOFTWARE, null);
+        wView.setInitialScale(1);
+        wView.setVerticalScrollBarEnabled(false);
+        //LinearLayout layout = (LinearLayout) findViewById(R.id.activity_nuevo_viaje);
+        //layout.addView(wView);
     }
 
     public void viajar(View view){
