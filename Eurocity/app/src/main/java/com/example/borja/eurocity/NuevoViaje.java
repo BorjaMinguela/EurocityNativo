@@ -1,6 +1,7 @@
 package com.example.borja.eurocity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,8 +29,11 @@ public class NuevoViaje extends AppCompatActivity {
 
     public void viajar(View view){
         Intent intent = new Intent(this, ViajePpal.class);
-        Viaje viaje = new Viaje(view.getTag().toString());
-        intent.putExtra("Viaje",viaje);
+        //Viaje viaje = new Viaje(view.getTag().toString());
+        SharedPreferences.Editor editor = getSharedPreferences("USER", MODE_PRIVATE).edit();
+        editor.putString("lugar", view.getTag().toString());
+        editor.commit();
+        //intent.putExtra("Viaje",viaje);
         startActivity(intent);
     }
 }

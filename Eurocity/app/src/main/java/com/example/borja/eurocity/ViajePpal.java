@@ -1,6 +1,7 @@
 package com.example.borja.eurocity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,7 +19,10 @@ public class ViajePpal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viaje_ppal);
-        viaje= (Viaje) getIntent().getSerializableExtra("Viaje");
+        //viaje= (Viaje) getIntent().getSerializableExtra("Viaje");
+        SharedPreferences prefs = getSharedPreferences("USER", MODE_PRIVATE);
+        String lugar= prefs.getString("lugar", "");
+        viaje=new Viaje(lugar);
         ((Button) findViewById(R.id.btn1)).setBackgroundColor(getResources().getColor(viaje.getColor()));
         ((Button) findViewById(R.id.btn2)).setBackgroundColor(getResources().getColor(viaje.getColor()));
         ((Button) findViewById(R.id.btn3)).setBackgroundColor(getResources().getColor(viaje.getColor()));

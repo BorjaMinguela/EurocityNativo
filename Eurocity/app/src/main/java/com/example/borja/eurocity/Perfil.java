@@ -2,6 +2,7 @@ package com.example.borja.eurocity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Environment;
@@ -22,19 +23,20 @@ public class Perfil extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
-        String login="";
-        if(savedInstanceState==null){
-            Bundle extras=getIntent().getExtras();
-            if(extras==null){
-                login="Problema con el usuario";
-            }
-            else{
-                login=extras.getString("USERNAME");
-            }
-        }
-        else{
-            login=(String)savedInstanceState.getSerializable("USERNAME");
-        }
+        SharedPreferences prefs = getSharedPreferences("USER", MODE_PRIVATE);
+        String login= prefs.getString("name", "");
+//        if(savedInstanceState==null){
+//            Bundle extras=getIntent().getExtras();
+//            if(extras==null){
+//                login="Problema con el usuario";
+//            }
+//            else{
+//                login=extras.getString("USERNAME");
+//            }
+//        }
+//        else{
+//            login=(String)savedInstanceState.getSerializable("USERNAME");
+//        }
         TextView username=(TextView)findViewById(R.id.userName);
         username.setText(login);
 

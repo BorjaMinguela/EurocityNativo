@@ -1,6 +1,7 @@
 package com.example.borja.eurocity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Perfil.class);
         String login= ((EditText)findViewById(R.id.login)).getText().toString();
         if(true){//TODO: Implementar autenticación
-            intent.putExtra("USERNAME",login);
+            SharedPreferences.Editor editor = getSharedPreferences("USER", MODE_PRIVATE).edit();
+            editor.putString("name", login);
+            editor.commit();
+            //intent.putExtra("USERNAME",login);
             startActivity(intent);
         }
     }
