@@ -7,23 +7,18 @@ import com.example.borja.eurocity.R;
 
 import java.io.Serializable;
 
+import lombok.Data;
+
 /**
  * Created by borja on 4/01/17.
  */
 
+@Data
 public class Viaje  implements Serializable {
     private String nombre;
 
     public Viaje(String nombre){
         this.setNombre(nombre);
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public int getColor() {

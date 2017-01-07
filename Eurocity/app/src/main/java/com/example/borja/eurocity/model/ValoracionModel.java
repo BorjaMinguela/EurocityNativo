@@ -1,9 +1,12 @@
 package com.example.borja.eurocity.model;
 
+import lombok.Data;
+
 /**
  * Created by borja on 6/01/17.
  */
 
+@Data
 public class ValoracionModel {
     private String nombre;
     private String lugar;
@@ -14,27 +17,5 @@ public class ValoracionModel {
         this.setNombre(nombre);
         this.setNota(nota);
     }
-    public String getNombre() {
-        return nombre;
-    }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getLugar() {
-        return lugar;
-    }
-
-    public void setLugar(String lugar) {
-        this.lugar = lugar;
-    }
-
-    public int getNota() {
-        return nota;
-    }
-
-    public void setNota(int nota) {
-        this.nota = nota;
-    }
 }
