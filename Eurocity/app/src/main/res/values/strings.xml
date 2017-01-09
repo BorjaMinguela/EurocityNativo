@@ -20,4 +20,6 @@
     <string name="no_camera">Se requiere de una cámara</string>
     <string name="no_app">No Packet Manager</string>
     <string name="valorar_nota">¡Pon una nota del 1 al 10 valorando tu experiencia del viaje!</string>
+    <string name="lugares_emblematicos">Lugares emblemáticos</string>
+    <string name="gastronomia">Gastronomía</string>
 </resources>

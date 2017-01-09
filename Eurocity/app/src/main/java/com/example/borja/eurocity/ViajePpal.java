@@ -49,7 +49,8 @@ public class ViajePpal extends AppCompatActivity {
     }
 
     public void turismo(View view){
-
+        Intent intent = new Intent(this,Turismo.class);
+        startActivity(intent);
     }
 
     public void valoracion(View view){
