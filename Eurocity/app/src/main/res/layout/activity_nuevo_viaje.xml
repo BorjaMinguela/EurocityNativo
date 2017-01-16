@@ -60,6 +60,8 @@
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:tag="@string/lisboa"
+                android:onClick="speak"
                 android:src="@android:drawable/ic_lock_silent_mode_off"/>
             <Button
                 android:text="@string/londres"
@@ -72,6 +74,8 @@
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:tag="@string/londres"
+                android:onClick="speak"
                 android:src="@android:drawable/ic_lock_silent_mode_off"/>
             <Button
                 android:text="@string/paris"
@@ -84,6 +88,8 @@
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:tag="@string/paris"
+                android:onClick="speak"
                 android:src="@android:drawable/ic_lock_silent_mode_off"/>
             <Button
                 android:text="@string/roma"
@@ -96,6 +102,8 @@
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:tag="@string/roma"
+                android:onClick="speak"
                 android:src="@android:drawable/ic_lock_silent_mode_off"/>
         </GridLayout>
     </LinearLayout>
