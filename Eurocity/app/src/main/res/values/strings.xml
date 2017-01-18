@@ -22,4 +22,8 @@
     <string name="valorar_nota">¡Pon una nota del 1 al 10 valorando tu experiencia del viaje!</string>
     <string name="lugares_emblematicos">Lugares emblemáticos</string>
     <string name="gastronomia">Gastronomía</string>
+    <string name="server_url">http://u017633.ehu.eus:28080/EurocityServer/rest/Eurocity</string>
+    <string name="no_internet">No tienes conexión a internet</string>
+    <string name="comentarios">Comentarios</string>
+    <string name="fotos">Fotos</string>
 </resources>

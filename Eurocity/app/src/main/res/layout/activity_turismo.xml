@@ -22,6 +22,7 @@
             android:shadowDx="3"
             android:shadowDy="3"
             android:shadowRadius="3"
+            android:onClick="gotoLugar"
             android:id="@+id/lugaresEmblematicos_btn"/>
         <Button
             android:layout_width="match_parent"
@@ -32,6 +33,7 @@
             android:shadowDy="3"
             android:shadowRadius="3"
             android:text="@string/gastronomia"
+            android:onClick="gotoComida"
             android:id="@+id/gastronomia_btn"/>
     </LinearLayout>
 

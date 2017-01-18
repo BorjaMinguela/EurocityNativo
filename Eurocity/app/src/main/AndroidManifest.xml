@@ -5,7 +5,11 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
@@ -30,7 +34,8 @@
         <activity android:name=".ViajePpal" />
         <activity android:name=".Idioma" />
         <activity android:name=".Valoracion" />
-        <activity android:name=".Turismo"></activity>
+        <activity android:name=".Turismo" />
+        <activity android:name=".LugaresEmblematicos"></activity>
     </application>
 
 </manifest>
