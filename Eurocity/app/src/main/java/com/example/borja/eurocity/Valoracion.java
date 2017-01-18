@@ -14,11 +14,13 @@ import android.widget.Toast;
 
 import com.example.borja.eurocity.model.ProgressTask;
 import com.example.borja.eurocity.model.RestClient;
+import com.example.borja.eurocity.model.ValoracionModel;
 
 import org.json.JSONObject;
 
 public class Valoracion extends AppCompatActivity {
     private RestClient rest;
+    private ValoracionModel val;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class Valoracion extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("USER", MODE_PRIVATE);
         final String login= prefs.getString("name", "");
         final String lugar= prefs.getString("lugar", "");
+        val=new ValoracionModel(login,lugar,valoracion);
         if(RestClient.getConnectivity(this)) {
             try {
                 new ProgressTask<Integer>(this) {
@@ -61,10 +64,7 @@ public class Valoracion extends AppCompatActivity {
     public int uploadValoracion(String nombre,int nota,String lugar){
         rest= new RestClient(getString(R.string.server_url));
         try {
-            JSONObject json = new JSONObject();
-            json.put("nota", nota);
-            json.put("user",nombre);
-            json.put("lugar",lugar);
+            JSONObject json = val.toJson();
             int result=rest.postJson(json,"addValoracion");
             Log.i("Valoracion response",Integer.toString(result));
             return result;

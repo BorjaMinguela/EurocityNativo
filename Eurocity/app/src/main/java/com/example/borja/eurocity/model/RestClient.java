@@ -2,6 +2,7 @@ package com.example.borja.eurocity.model;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Base64;
@@ -40,6 +41,16 @@ public class RestClient {
             return true;
         }
         else return false;
+    }
+
+    public static Drawable loadImageFromWebOperations(String url) {
+        try {
+            InputStream is = (InputStream) new URL(url).getContent();
+            Drawable d = Drawable.createFromStream(is, "");
+            return d;
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     public void setHttpBasicAuth(String user, String passwd){

@@ -1,6 +1,7 @@
 package com.example.borja.eurocity;
 
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.LinearLayout;
@@ -22,6 +23,7 @@ public class LugaresEmblematicos extends AppCompatActivity {
         for(String texto : viaje.getLugaresEmblematicos()){
             TextView textView = new TextView(this);
             textView.setText(texto);
+            textView.setTypeface(null, Typeface.BOLD);
             group.addView(textView);
         }
     }

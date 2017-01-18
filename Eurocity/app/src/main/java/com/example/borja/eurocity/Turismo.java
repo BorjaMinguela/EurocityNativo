@@ -29,7 +29,7 @@ public class Turismo extends AppCompatActivity {
     }
 
     public void gotoComida(View view){
-        //Intent intent = new Intent(this,Gastronomia.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this,Gastronomia.class);
+        startActivity(intent);
     }
 }

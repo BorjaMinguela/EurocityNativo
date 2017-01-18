@@ -50,9 +50,9 @@
             android:layout_height="wrap_content"
             android:columnCount="2">
             <Button
-                android:text="@string/lisboa"
+                android:text="@string/Lisboa"
                 android:onClick="viajar"
-                android:tag="lisboa"
+                android:tag="Lisboa"
                 android:background="@color/LimeGreen"
                 android:layout_margin="5dp"
                 android:layout_width="250dp"
@@ -60,13 +60,13 @@
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:tag="@string/lisboa"
+                android:tag="@string/Lisboa"
                 android:onClick="speak"
                 android:src="@android:drawable/ic_lock_silent_mode_off"/>
             <Button
-                android:text="@string/londres"
+                android:text="@string/Londres"
                 android:onClick="viajar"
-                android:tag="londres"
+                android:tag="Londres"
                 android:background="@color/Orange"
                 android:layout_margin="5dp"
                 android:layout_width="250dp"
@@ -74,13 +74,13 @@
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:tag="@string/londres"
+                android:tag="@string/Londres"
                 android:onClick="speak"
                 android:src="@android:drawable/ic_lock_silent_mode_off"/>
             <Button
-                android:text="@string/paris"
+                android:text="@string/Paris"
                 android:onClick="viajar"
-                android:tag="paris"
+                android:tag="Paris"
                 android:background="@color/Yellow"
                 android:layout_margin="5dp"
                 android:layout_width="250dp"
@@ -88,13 +88,13 @@
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:tag="@string/paris"
+                android:tag="@string/Paris"
                 android:onClick="speak"
                 android:src="@android:drawable/ic_lock_silent_mode_off"/>
             <Button
-                android:text="@string/roma"
+                android:text="@string/Roma"
                 android:onClick="viajar"
-                android:tag="roma"
+                android:tag="Roma"
                 android:background="@color/MediumTurquoise"
                 android:layout_margin="5dp"
                 android:layout_width="250dp"
@@ -102,7 +102,7 @@
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:tag="@string/roma"
+                android:tag="@string/Roma"
                 android:onClick="speak"
                 android:src="@android:drawable/ic_lock_silent_mode_off"/>
         </GridLayout>

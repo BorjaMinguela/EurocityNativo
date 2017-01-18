@@ -25,13 +25,13 @@ public class Viaje  implements Serializable {
 
     public int getColor() {
         switch (nombre){
-            case "lisboa":
+            case "Lisboa":
                 return R.color.LimeGreen;
-            case "londres":
+            case "Londres":
                 return R.color.Orange;
-            case "paris":
+            case "Paris":
                 return R.color.Yellow;
-            case "roma":
+            case "Roma":
                 return R.color.MediumTurquoise;
 
         }
@@ -39,13 +39,13 @@ public class Viaje  implements Serializable {
     }
     public Uri getLocation(){
         switch (nombre){
-            case "lisboa":
+            case "Lisboa":
                 return Uri.parse("geo:38.7436057,-9.2302437");
-            case "londres":
+            case "Londres":
                 return Uri.parse("geo:51.5287352,-0.3817868");
-            case "paris":
+            case "Paris":
                 return Uri.parse("geo:48.8589507,2.2775166");
-            case "roma":
+            case "Roma":
                 return Uri.parse("geo:41.9102415,12.3959112");
         }
         return Uri.parse("geo:0,0");
@@ -54,22 +54,22 @@ public class Viaje  implements Serializable {
     public List<String> getLugaresEmblematicos(){
         List<String> lugares = new ArrayList<>();
         switch (nombre){
-            case "lisboa":
+            case "Lisboa":
                 lugares.add("Plaza del comercio");
                 lugares.add("Torre de Belém");
                 lugares.add("Barrio de la Alfama");
                 break;
-            case "londres":
+            case "Londres":
                 lugares.add("London Eye");
                 lugares.add("Buckingham palace");
                 lugares.add("Big Ben");
                 break;
-            case "paris":
+            case "Paris":
                 lugares.add("Torre Eiffel");
                 lugares.add("Catedral de Notre Dame");
                 lugares.add("Arco del triunfo");
                 break;
-            case "roma":
+            case "Roma":
                 lugares.add("Coliseo");
                 lugares.add("Fontana de Trevi");
                 lugares.add("Foro Romano");
@@ -81,25 +81,25 @@ public class Viaje  implements Serializable {
     public List<String> getGastronomia(){
         List<String> lugares = new ArrayList<>();
         switch (nombre){
-            case "lisboa":
+            case "Lisboa":
                 lugares.add("Bolinhas de berlim");
                 lugares.add("Bacalao");
                 lugares.add("Pasteles de belem");
                 lugares.add("Francesinha");
                 break;
-            case "londres":
+            case "Londres":
                 lugares.add("Fish and chips");
                 lugares.add("Crepes");
                 lugares.add("Pies and kornish pasties");
                 lugares.add("Backed/jacket potatoe");
                 break;
-            case "paris":
+            case "Paris":
                 lugares.add("Ratatouille");
                 lugares.add("Macarons");
                 lugares.add("Foie grass");
                 lugares.add("Omelettes");
                 break;
-            case "roma":
+            case "Roma":
                 lugares.add("Supplí alla Romana");
                 lugares.add("Spagetti alla Carbonara");
                 lugares.add("Gelato");

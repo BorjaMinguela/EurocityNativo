@@ -7,10 +7,10 @@
     <string name="nuevo_viaje">Nuevo Viaje</string>
     <string name="no_foto_default">¿A qué esperas? ¡Sube una foto de perfil!</string>
     <string name="cl_destino">¿Cúal es tu destino?</string>
-    <string name="roma">Roma</string>
-    <string name="paris">París</string>
-    <string name="londres">Londres</string>
-    <string name="lisboa">Lisboa</string>
+    <string name="Roma">Roma</string>
+    <string name="Paris">París</string>
+    <string name="Londres">Londres</string>
+    <string name="Lisboa">Lisboa</string>
     <string name="nqtpayudar">¿En qué te puedo ayudar?</string>
     <string name="idioma">Idioma</string>
     <string name="ubicacion">Ubicación</string>

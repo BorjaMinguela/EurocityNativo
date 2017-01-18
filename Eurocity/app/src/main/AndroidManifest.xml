@@ -35,7 +35,8 @@
         <activity android:name=".Idioma" />
         <activity android:name=".Valoracion" />
         <activity android:name=".Turismo" />
-        <activity android:name=".LugaresEmblematicos"></activity>
+        <activity android:name=".LugaresEmblematicos" />
+        <activity android:name=".Gastronomia"></activity>
     </application>
 
 </manifest>
