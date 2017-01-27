@@ -9,6 +9,8 @@ import android.text.Html;
 import android.text.Spanned;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -109,6 +111,10 @@ public class LugaresEmblematicos extends AppCompatActivity {
     }
 
     public void loadForo(View view){
+        EditText editText = (EditText) findViewById(R.id.emblematicos_comentario);
+        editText.setVisibility(View.VISIBLE);
+        Button button = (Button) findViewById(R.id.emblematicos_btn_comentario);
+        button.setVisibility(View.VISIBLE);
         if(RestClient.getConnectivity(this)) {
             try {
                 new ProgressTask<Comentarios>(this) {

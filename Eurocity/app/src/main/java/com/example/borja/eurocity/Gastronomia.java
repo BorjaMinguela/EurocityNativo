@@ -9,6 +9,8 @@ import android.text.Html;
 import android.text.Spanned;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -110,8 +112,10 @@ public class Gastronomia extends AppCompatActivity {
     }
 
     public void loadForo(View view){
-        //ScrollView layout = (ScrollView)findViewById(R.id.activity_gastronomia);
-        //layout.removeView(findViewById(R.id.gastronomia_foro_btn));
+        EditText editText = (EditText) findViewById(R.id.gastronomia_comentario);
+        editText.setVisibility(View.VISIBLE);
+        Button button = (Button) findViewById(R.id.gastronomia_btn_comentario);
+        button.setVisibility(View.VISIBLE);
         if(RestClient.getConnectivity(this)) {
             try {
                 new ProgressTask<Comentarios>(this) {

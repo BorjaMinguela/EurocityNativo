@@ -26,4 +26,6 @@
     <string name="no_internet">No tienes conexión a internet</string>
     <string name="comentarios">Comentarios</string>
     <string name="fotos">Fotos</string>
+    <string name="int_comentario">Introduzca tu comentario</string>
+    <string name="enviar">Enviar</string>
 </resources>
