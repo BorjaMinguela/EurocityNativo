@@ -1,6 +1,7 @@
 package com.example.borja.eurocity;
 
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
@@ -42,45 +43,23 @@ public class Gastronomia extends AppCompatActivity {
             textView.setTypeface(null, Typeface.BOLD);
             group.addView(textView);
         }
-        /*if(RestClient.getConnectivity(this)) {
-            try {
-                new ProgressTask<Drawable>(this) {
-                    @Override
-                    protected Drawable work() throws Exception {
-                        Drawable response=getImage("http://www.manyar.com.mx/web/images/manyar-comida-saludable-inicio-1.jpg");
-                        return response;
-                    }
-
-                    @Override
-                    protected void onFinish(Drawable result) {
-
-                        dibujar(result);
-                    }
-                }.execute();
-            } catch (Exception e) {
-                Toast.makeText(this, e.toString(),Toast.LENGTH_LONG).show();
-            }
-        }
-        else{
-            Toast.makeText(this, R.string.no_internet,Toast.LENGTH_SHORT).show();
-        }*/
 
         if(RestClient.getConnectivity(this)) {
             try {
-                new ProgressTask<List<Drawable>>(this) {
+                new ProgressTask<List<Bitmap>>(this) {
                     @Override
-                    protected List<Drawable> work() throws Exception {
+                    protected List<Bitmap> work() throws Exception {
                         List<String> urls=getFotos();
-                        List<Drawable> drawables=new ArrayList();
+                        List<Bitmap> bitmaps=new ArrayList();
                         for(String url:urls){
-                            drawables.add(getImage(url));
+                            bitmaps.add(getImage(url));
                         }
-                        return drawables;
+                        return bitmaps;
                     }
 
                     @Override
-                    protected void onFinish(List<Drawable> response) {
-                        for(Drawable image:response){
+                    protected void onFinish(List<Bitmap> response) {
+                        for(Bitmap image:response){
                             dibujar(image);
                         }
                     }
@@ -96,19 +75,16 @@ public class Gastronomia extends AppCompatActivity {
 
     }
 
-    public Drawable getImage(String url){
-        return RestClient.loadImageFromWebOperations(url);
+    public Bitmap getImage(String url){
+        return RestClient.loadImageFromUrl(url);
     }
 
-    public void dibujar(Drawable foto){
-        LinearLayout group = (LinearLayout) findViewById(R.id.gastronomia_text);//Cambiar
-
+    public void dibujar(Bitmap foto){
+        LinearLayout group = (LinearLayout) findViewById(R.id.gastronomia_text);
+        Bitmap scaled;
+        scaled=Bitmap.createScaledBitmap(foto,500,300,false);//Para API level 15
         ImageView imageView=new ImageView(this);
-        imageView.setImageDrawable(foto);
-        //android.view.ViewGroup.LayoutParams layoutParams = imageView.getLayoutParams();
-        //layoutParams.width = 80;
-        //layoutParams.height = 80;
-        //imageView.setLayoutParams(layoutParams);
+        imageView.setImageBitmap(scaled);
         group.addView(imageView);
     }
 

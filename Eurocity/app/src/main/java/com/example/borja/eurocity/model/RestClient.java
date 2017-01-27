@@ -2,6 +2,8 @@ package com.example.borja.eurocity.model;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -43,11 +45,11 @@ public class RestClient {
         else return false;
     }
 
-    public static Drawable loadImageFromWebOperations(String url) {
+    public static Bitmap loadImageFromUrl(String url) {
         try {
             InputStream is = (InputStream) new URL(url).getContent();
-            Drawable d = Drawable.createFromStream(is, "");
-            return d;
+            Bitmap bitmap = BitmapFactory.decodeStream(is);
+            return bitmap;
         } catch (Exception e) {
             return null;
         }
