@@ -22,6 +22,8 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="loadForo"
+            android:id="@+id/gastronomia_foro_btn"
             android:text="@string/comentarios"
             />
         <LinearLayout

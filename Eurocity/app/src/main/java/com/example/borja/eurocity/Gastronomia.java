@@ -5,12 +5,18 @@ import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.Spanned;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.borja.eurocity.model.Comentario;
+import com.example.borja.eurocity.model.Comentarios;
 import com.example.borja.eurocity.model.Fotos;
 import com.example.borja.eurocity.model.ProgressTask;
 import com.example.borja.eurocity.model.RestClient;
@@ -101,5 +107,59 @@ public class Gastronomia extends AppCompatActivity {
             Log.e("Error en gastronomia",e.toString());
         }
         return urls;
+    }
+
+    public void loadForo(View view){
+        //ScrollView layout = (ScrollView)findViewById(R.id.activity_gastronomia);
+        //layout.removeView(findViewById(R.id.gastronomia_foro_btn));
+        if(RestClient.getConnectivity(this)) {
+            try {
+                new ProgressTask<Comentarios>(this) {
+                    @Override
+                    protected Comentarios work() throws Exception {
+                        Comentarios comentarios=getComentarios();
+                        return comentarios;
+                    }
+
+                    @Override
+                    protected void onFinish(Comentarios response) {
+                        cargarForo(response);
+                    }
+                }.execute();
+            } catch (Exception e) {
+                Toast.makeText(this, e.toString(),Toast.LENGTH_LONG).show();
+            }
+        }
+        else{
+            Toast.makeText(this, R.string.no_internet,Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public Comentarios getComentarios(){
+        Comentarios comentarios = new Comentarios();
+        rest= new RestClient(getString(R.string.server_url));
+        try {
+            JSONObject json = rest.getJson(String.format("requestComentarios?categoria=gastronomia&ciudad=%s", viaje.getNombre()));
+            JSONArray array = json.getJSONArray("comentario");
+            comentarios.addComentariosFromJson(array);
+            //comentarios=comments.getForo();
+
+        }
+        catch (Exception e){
+            Log.e("Error en gastronomia",e.toString());
+        }
+        return comentarios;
+    }
+
+    public void cargarForo(Comentarios comentarios){
+        LinearLayout group = (LinearLayout) findViewById(R.id.gastronomia_foro);
+        group.removeAllViews();
+        for(Comentario comentario:comentarios.getComentarios()){
+            String texto="<b>"+comentario.getUser()+"</b>: "+comentario.getComentario();
+            Spanned text = Html.fromHtml(texto);
+            TextView textView = new TextView(this);
+            textView.setText(text);
+            group.addView(textView);
+        }
     }
 }
