@@ -19,12 +19,6 @@
             android:orientation="vertical"
             android:id="@+id/gastronomia_text">
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/gastronomia_foro">
-        </LinearLayout>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:id="@+id/gastronomia_fotos">
+            android:id="@+id/gastronomia_foro">
         </LinearLayout>
     </LinearLayout>
 

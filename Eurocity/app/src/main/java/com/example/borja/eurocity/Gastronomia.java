@@ -3,7 +3,6 @@ package com.example.borja.eurocity;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,7 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.borja.eurocity.model.Foto;
 import com.example.borja.eurocity.model.Fotos;
 import com.example.borja.eurocity.model.ProgressTask;
 import com.example.borja.eurocity.model.RestClient;
