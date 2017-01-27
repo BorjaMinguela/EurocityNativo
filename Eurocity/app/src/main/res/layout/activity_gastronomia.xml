@@ -22,7 +22,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="loadForo"
+            android:onClick="loadForoGastro"
             android:id="@+id/gastronomia_foro_btn"
             android:text="@string/comentarios"
             />
@@ -37,6 +37,7 @@
             android:id="@+id/gastronomia_btn_comentario"
             android:layout_height="wrap_content"
             android:text="@string/enviar"
+            android:onClick="sendComentarioGastro"
             android:visibility="invisible"/>
         <LinearLayout
             android:layout_width="match_parent"

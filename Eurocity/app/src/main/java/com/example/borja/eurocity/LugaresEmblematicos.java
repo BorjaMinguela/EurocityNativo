@@ -32,6 +32,7 @@ import java.util.List;
 public class LugaresEmblematicos extends AppCompatActivity {
     private Viaje viaje;
     RestClient rest;
+    private Comentario com;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,6 +164,53 @@ public class LugaresEmblematicos extends AppCompatActivity {
             TextView textView = new TextView(this);
             textView.setText(text);
             group.addView(textView);
+        }
+    }
+
+    public void sendComentario(View view){
+        final String comentario=((EditText)findViewById(R.id.emblematicos_comentario)).getText().toString().trim();
+        SharedPreferences prefs = getSharedPreferences("USER", MODE_PRIVATE);
+        final String user= prefs.getString("name", "");
+        final String lugar= prefs.getString("lugar", "");
+        com=new Comentario();
+        com.setLugar(lugar);
+        com.setUser(user);
+        com.setCategoria("interes");
+        com.setComentario(comentario);
+        if(RestClient.getConnectivity(this)) {
+            try {
+                new ProgressTask<Integer>(this) {
+                    @Override
+                    protected Integer work() throws Exception {
+                        int response=uploadComentario();
+                        return response;
+                    }
+
+                    @Override
+                    protected void onFinish(Integer response) {
+
+                    }
+                }.execute();
+            } catch (Exception e) {
+                Toast.makeText(this, e.toString(),Toast.LENGTH_LONG).show();
+            }
+        }
+        else{
+            Toast.makeText(this, R.string.no_internet,Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public int uploadComentario(){
+        rest= new RestClient(getString(R.string.server_url));
+        try {
+            JSONObject json = com.toJson();
+            int result=rest.postJson(json,"addComentario");
+            Log.i("Valoracion response",Integer.toString(result));
+            return result;
+
+        }
+        catch (Exception e){
+            return -1;
         }
     }
 }

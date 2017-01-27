@@ -33,6 +33,7 @@ import java.util.List;
 public class Gastronomia extends AppCompatActivity {
     Viaje viaje;
     RestClient rest;
+    Comentario com;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,7 +112,7 @@ public class Gastronomia extends AppCompatActivity {
         return urls;
     }
 
-    public void loadForo(View view){
+    public void loadForoGastro(View view){
         EditText editText = (EditText) findViewById(R.id.gastronomia_comentario);
         editText.setVisibility(View.VISIBLE);
         Button button = (Button) findViewById(R.id.gastronomia_btn_comentario);
@@ -164,6 +165,53 @@ public class Gastronomia extends AppCompatActivity {
             TextView textView = new TextView(this);
             textView.setText(text);
             group.addView(textView);
+        }
+    }
+
+    public void sendComentarioGastro(View view){
+        final String comentario=((EditText)findViewById(R.id.gastronomia_comentario)).getText().toString().trim();
+        SharedPreferences prefs = getSharedPreferences("USER", MODE_PRIVATE);
+        final String user= prefs.getString("name", "");
+        final String lugar= prefs.getString("lugar", "");
+        com=new Comentario();
+        com.setLugar(lugar);
+        com.setUser(user);
+        com.setCategoria("gastronomia");
+        com.setComentario(comentario);
+        if(RestClient.getConnectivity(this)) {
+            try {
+                new ProgressTask<Integer>(this) {
+                    @Override
+                    protected Integer work() throws Exception {
+                        int response=uploadComentario();
+                        return response;
+                    }
+
+                    @Override
+                    protected void onFinish(Integer response) {
+
+                    }
+                }.execute();
+            } catch (Exception e) {
+                Toast.makeText(this, e.toString(),Toast.LENGTH_LONG).show();
+            }
+        }
+        else{
+            Toast.makeText(this, R.string.no_internet,Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public int uploadComentario(){
+        rest= new RestClient(getString(R.string.server_url));
+        try {
+            JSONObject json = com.toJson();
+            int result=rest.postJson(json,"addComentario");
+            Log.i("Valoracion response",Integer.toString(result));
+            return result;
+
+        }
+        catch (Exception e){
+            return -1;
         }
     }
 }
