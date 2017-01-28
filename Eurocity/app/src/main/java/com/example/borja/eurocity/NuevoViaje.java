@@ -43,7 +43,7 @@ public class NuevoViaje extends AppCompatActivity {
 
     public void speak(View view){
         String toSpeak = view.getTag().toString();
-        Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
         tts.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
 
     }

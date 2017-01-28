@@ -25,9 +25,16 @@
                 android:textSize="18dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:layout_alignParentLeft="true"
                 android:id="@+id/textView" />
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:tag="@string/nqtpayudar"
+                android:onClick="speak"
+                android:src="@android:drawable/ic_lock_silent_mode_off"/>
 
             <WebView
                 android:layout_width="150dp"

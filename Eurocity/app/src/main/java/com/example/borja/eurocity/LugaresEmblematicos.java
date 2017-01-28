@@ -179,16 +179,17 @@ public class LugaresEmblematicos extends AppCompatActivity {
         com.setComentario(comentario);
         if(RestClient.getConnectivity(this)) {
             try {
-                new ProgressTask<Integer>(this) {
+                new ProgressTask<Comentarios>(this) {
                     @Override
-                    protected Integer work() throws Exception {
+                    protected Comentarios work() throws Exception {
                         int response=uploadComentario();
-                        return response;
+                        Comentarios comentarios=getComentarios();
+                        return comentarios;
                     }
 
                     @Override
-                    protected void onFinish(Integer response) {
-
+                    protected void onFinish(Comentarios response) {
+                        cargarForo(response);
                     }
                 }.execute();
             } catch (Exception e) {
