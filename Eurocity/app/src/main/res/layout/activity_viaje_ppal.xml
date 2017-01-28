@@ -81,12 +81,6 @@
             android:text="@string/valoracion"
             android:layout_width="match_parent"
             android:layout_height="50dp"/>
-        <Button
-            android:id="@+id/btn5"
-            android:layout_margin="5dp"
-            android:text="@string/aprendido"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"/>
     </LinearLayout>
 
 </ScrollView>

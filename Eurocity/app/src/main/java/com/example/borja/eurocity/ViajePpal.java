@@ -31,7 +31,6 @@ public class ViajePpal extends AppCompatActivity {
         ((Button) findViewById(R.id.btn2)).setBackgroundColor(getResources().getColor(viaje.getColor()));
         ((Button) findViewById(R.id.btn3)).setBackgroundColor(getResources().getColor(viaje.getColor()));
         ((Button) findViewById(R.id.btn4)).setBackgroundColor(getResources().getColor(viaje.getColor()));
-        ((Button) findViewById(R.id.btn5)).setBackgroundColor(getResources().getColor(viaje.getColor()));
         WebView wView=(WebView)findViewById(R.id.vppal_web);
         wView.loadUrl("file:///android_asset/doge.html");
         wView.setBackgroundColor(Color.TRANSPARENT);

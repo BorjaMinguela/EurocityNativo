@@ -100,4 +100,9 @@ public class Perfil extends AppCompatActivity {
         Intent intent = new Intent(this, NuevoViaje.class);
         startActivity(intent);
     }
+
+    public void misDestinos(View view){
+        Intent intent = new Intent(this, MisDestinos.class);
+        startActivity(intent);
+    }
 }
