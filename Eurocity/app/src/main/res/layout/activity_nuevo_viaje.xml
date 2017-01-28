@@ -28,15 +28,14 @@
                 android:layout_marginTop="40dp"
                 android:layout_alignParentLeft="true"
                 android:id="@+id/textView" />
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:tag="@string/cl_destino"
+                android:onClick="speak"
+                android:src="@android:drawable/ic_lock_silent_mode_off"/>
 
-            <!--<ImageView
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginStart="15dp"
-                android:src="@drawable/doge"
-                android:id="@+id/imageView"
-                android:layout_toRightOf="@+id/textView"/>-->
             <WebView
                 android:layout_width="150dp"
                 android:layout_height="130dp"
