@@ -81,6 +81,12 @@
             android:text="@string/valoracion"
             android:layout_width="match_parent"
             android:layout_height="50dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sacar una foto"
+            android:onClick="sacarFoto"
+            android:drawableLeft="@android:drawable/ic_menu_camera"/>
     </LinearLayout>
 
 </ScrollView>
