@@ -44,12 +44,15 @@
             android:label="@string/turismo" />
         <activity
             android:name=".LugaresEmblematicos"
-            android:label="@string/lugares_emblematicos" />
+            android:label="@string/lugares_emblematicos"
+            android:configChanges="orientation|screenSize"/>
         <activity
             android:name=".Gastronomia"
-            android:label="@string/gastronomia" />
+            android:label="@string/gastronomia"
+            android:configChanges="orientation|screenSize"/>
         <activity android:name=".MisDestinos"
-            android:label="@string/mis_destinos"></activity>
+            android:label="@string/mis_destinos"
+            android:configChanges="orientation|screenSize"></activity>
     </application>
 
 </manifest>
