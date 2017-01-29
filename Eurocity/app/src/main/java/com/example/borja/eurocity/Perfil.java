@@ -49,6 +49,8 @@ public class Perfil extends AppCompatActivity {
             ImageView imageView = (ImageView) findViewById(R.id.fotoPerfil);
             imageView.setImageBitmap(bitmap);
             imageView.setVisibility(ImageView.VISIBLE);
+            TextView textView = (TextView) findViewById(R.id.no_foto);
+            textView.setVisibility(View.INVISIBLE);
         }
 
     }
@@ -92,6 +94,8 @@ public class Perfil extends AppCompatActivity {
                     ImageView imageView = (ImageView) findViewById(R.id.fotoPerfil);
                     imageView.setImageBitmap(bitmap);
                     imageView.setVisibility(ImageView.VISIBLE);
+                    TextView textView = (TextView) findViewById(R.id.no_foto);
+                    textView.setVisibility(View.INVISIBLE);
                 }
                 break;
         }
