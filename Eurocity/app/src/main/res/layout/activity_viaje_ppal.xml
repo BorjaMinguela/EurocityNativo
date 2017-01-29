@@ -82,9 +82,11 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"/>
         <Button
+            android:id="@+id/btn5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sacar una foto"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:text="@string/sacar_una_foto"
             android:onClick="sacarFoto"
             android:drawableLeft="@android:drawable/ic_menu_camera"/>
     </LinearLayout>

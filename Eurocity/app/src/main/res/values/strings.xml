@@ -28,4 +28,5 @@
     <string name="fotos">Fotos</string>
     <string name="int_comentario">Introduzca tu comentario</string>
     <string name="enviar">Enviar</string>
+    <string name="sacar_una_foto">Sacar una foto</string>
 </resources>
