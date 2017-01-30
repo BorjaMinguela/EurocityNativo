@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Environment;
@@ -17,17 +15,14 @@ import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.borja.eurocity.model.Foto;
-import com.example.borja.eurocity.model.ProgressTask;
 import com.example.borja.eurocity.model.RestClient;
 import com.example.borja.eurocity.model.Viaje;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Locale;
 
 public class ViajePpal extends AppCompatActivity {

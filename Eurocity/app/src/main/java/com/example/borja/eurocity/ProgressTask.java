@@ -1,4 +1,4 @@
-package com.example.borja.eurocity.model;
+package com.example.borja.eurocity;
 
 import android.app.ProgressDialog;
 import android.content.Context;

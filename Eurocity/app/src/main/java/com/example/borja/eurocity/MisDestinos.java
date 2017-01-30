@@ -11,7 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.borja.eurocity.model.Fotos;
-import com.example.borja.eurocity.model.ProgressTask;
 import com.example.borja.eurocity.model.RestClient;
 
 import org.json.JSONArray;

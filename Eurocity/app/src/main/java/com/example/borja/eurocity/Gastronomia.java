@@ -13,14 +13,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.borja.eurocity.model.Comentario;
 import com.example.borja.eurocity.model.Comentarios;
 import com.example.borja.eurocity.model.Fotos;
-import com.example.borja.eurocity.model.ProgressTask;
 import com.example.borja.eurocity.model.RestClient;
 import com.example.borja.eurocity.model.Viaje;
 

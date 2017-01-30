@@ -1,18 +1,15 @@
 package com.example.borja.eurocity;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.borja.eurocity.model.ProgressTask;
 import com.example.borja.eurocity.model.RestClient;
 import com.example.borja.eurocity.model.ValoracionModel;
 
@@ -49,7 +46,7 @@ public class Valoracion extends AppCompatActivity {
 
                     @Override
                     protected void onFinish(Integer result) {
-                        
+                        endValoracion();
                     }
                 }.execute();
             } catch (Exception e) {
@@ -74,5 +71,10 @@ public class Valoracion extends AppCompatActivity {
             return -1;
         }
 
+    }
+
+    public void endValoracion(){
+        ((Button) findViewById(R.id.valoracion_bt)).setVisibility(View.INVISIBLE);
+        Toast.makeText(this, "Gracias por su valoración",Toast.LENGTH_SHORT).show();
     }
 }
